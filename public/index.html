@@ -17,6 +17,7 @@
     <div class="calculator">
       <div class="displaytext"><span>0</span></div>
       <div class="buttonbox">
+        <button class="row-4 col-3 non-digit" data-sym="=">=</button>
       </div>
     </div>
 
@@ -25,6 +26,7 @@
     <script>
       document.addEventListener('DOMContentLoaded', () => {
         const rootElement = document.querySelector('.calculator');
+        CalculatorController(rootElement);
       });
     </script>
 
