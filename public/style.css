@@ -1,0 +1,163 @@
+/*------------------------------------*\
+    RESET
+\*------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0b1 | 201101 
+    NOTE:WORK IN PROGRESS
+    USE WITH CAUTION AND TEST WITH ABANDON */
+
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td,
+article,aside,canvas,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section,summary,
+time,mark,audio,video{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    font:inherit;
+    vertical-align:baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{
+    display:block;
+}
+body{
+    line-height:1;
+}
+ol,ul{
+    list-style:none;
+}
+blockquote,q{
+    quotes:none;
+}
+blockquote:before,blockquote:after,
+q:before,q:after{
+    content:’’;
+    content:none;
+}
+/* remember to define visible focus styles! 
+:focus{
+    outline:?????;
+} */
+
+/* remember to highlight inserts somehow! */
+ins{
+    text-decoration:none;
+}
+del{
+    text-decoration:line-through;
+}
+
+table{
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+
+
+/*------------------------------------*\
+    $MAIN
+\*------------------------------------*/
+/* GO! */
+
+/* @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap'); */
+
+:root {
+  --main-font-size: 24pt;
+  --screen-font-size: 32pt;
+  --screen-color: #93c47d;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+
+.calculator {
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  font-size: var(--main-font-size);
+  outline: 1pt solid #c4c4c4;
+  padding: calc(var(--screen-font-size) / 2 );
+  width: calc(12 * var(--screen-font-size));
+}
+
+.displaytext  {
+  background-color: var(--screen-color);
+  border: 1px solid #999;
+  color: #333;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: var(--screen-font-size);
+  height: calc(2 * var(--screen-font-size));
+  margin: calc(var(--screen-font-size) / 2 ) auto calc(var(--screen-font-size) * 1) auto;
+  padding: 0;
+  text-align: right;
+  width: calc(11.5 * var(--screen-font-size));
+}
+
+.displaytext > span {
+  margin: 0 .5em;
+  vertical-align: middle;
+  text-align: right;
+  line-height: calc(2 * var(--screen-font-size));
+}
+
+.buttonbox {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: .8em;
+  justify-content: space-evenly;
+  justify-items: center;
+  margin: var(--screen-font-size) auto;
+  width: calc(11.5 * var(--screen-font-size));
+}
+
+.buttonbox > button {
+  background-color: #595959;
+  border: 5pt #333;
+  border-radius: 2pt;
+  color: #fefefe;
+  cursor: pointer;
+  font-family: 'Roboto Mono', monospace;
+  font-size: var(--screen-font-size);
+  font-weight: bold;
+  height: calc(2 * var(--screen-font-size));
+  padding: .1em;
+  width: calc(2 * var(--screen-font-size));
+}
+
+.buttonbox > button.non-digit {
+  background-color: #888;
+}
+
+.buttonbox > button:active {
+  box-shadow: .05em .05em .2em var(--screen-color);
+}
+
+.col-1 { grid-column: 1; }
+.col-2 { grid-column: 2; }
+.col-3 { grid-column: 3; }
+.col-4 { grid-column: 4; }
+
+.row-1 { grid-row: 1; }
+.row-2 { grid-row: 2; }
+.row-3 { grid-row: 3; }
+.row-4 { grid-row: 4; }
+
+
+
